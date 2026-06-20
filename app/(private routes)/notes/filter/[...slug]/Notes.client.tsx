@@ -3,15 +3,15 @@
 import SearchBox from "@/components/SearchBox/SearchBox";
 import css from "./notes.module.css";
 
-import { fetchNotes } from "@/lib/api";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { JSX, useState } from "react";
-import Pagination from "../../../../components/Pagination/Pagination";
 import Loader from "@/components/Loader/Loader";
 import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
 import NoteList from "@/components/NoteList/NoteList";
 import { useDebouncedCallback } from "use-debounce";
 import Link from "next/link";
+import { fetchNotes } from "@/lib/api/clientApi";
+import Pagination from "@/components/Pagination/Pagination";
 
 interface NotesClientProps {
   tag: string | undefined;

@@ -3,10 +3,10 @@
 import css from "./NoteForm.module.css";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import type { NewNoteBody, Tags } from "../../types/note";
-import { createNote } from "../../lib/api";
 import { useRouter } from "next/navigation";
 import { useNoteDraftStore } from "@/lib/store/noteStore";
 import { ChangeEvent } from "react";
+import { createNote } from "@/lib/api/clientApi";
 
 interface NoteForm {
   title: string;
