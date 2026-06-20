@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import { Note } from "@/types/note";
 import { User } from "@/types/user";
 import { AxiosResponse } from "axios";
-import { api } from "../api";
+import { api } from "./api";
 export interface FetchNotesResponse {
   notes: Note[];
   totalPages: number;
