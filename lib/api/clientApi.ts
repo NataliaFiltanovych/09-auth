@@ -83,8 +83,8 @@ export const checkSession = async (): Promise<boolean> => {
   return data.success;
 };
 
-export const getMe = async () => {
-  const { data } = await api.get("/users/me", {
+export const getMe = async (): Promise<User> => {
+  const { data } = await api.get<User>("/users/me", {
     withCredentials: true,
   });
 
